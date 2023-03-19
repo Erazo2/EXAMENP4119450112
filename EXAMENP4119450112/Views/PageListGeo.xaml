@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EXAMENP4119450112.Views.PageListGeo">
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView x:Name="listloca"
+                            Margin="20"
+                            SelectionMode="Single"
+                            SelectionChanged="listloca_SelectionChanged">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" 
+                                       ItemSpacing="10" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding descripcion_corta}" />
+
+                            <Label Text="{Binding descripcion_larga}"/>
+
+                            <Label Text="{Binding latitud}" />
+
+                            <Label Text="{Binding longitud}" />
+
+
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
